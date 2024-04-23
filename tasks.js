@@ -1,10 +1,10 @@
 import fetch from "node-fetch";
-import "dotenv/config";
+import config from "./config.js";
 
 const tasks_config = {
-  apiKey: process.env.TASKS_API_KEY,
+  apiKey: config.apiKey,
   token: "",
-  url: process.env.TASKS_URL,
+  url: config.tasksUrl,
 };
 
 export const get_token = async (task_name) => {
